@@ -1,0 +1,13 @@
+Script started on 2026-09-03 16:22:28-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="177" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [K]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [K]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [K]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [K]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ date
+[?2004lThu Sep  3 16:48:28 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ whoami
+[?2004lskickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ pwd
+[?2004l/home/skickle/OS/Scheduler
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ make
+[?2004lgcc -Wall -Wextra -o scheduler scheduler.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-03 17:21:17-03:00 [COMMAND_EXIT_CODE="0"]
