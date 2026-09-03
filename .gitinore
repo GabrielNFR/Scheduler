@@ -1,0 +1,6 @@
+scheduler
+*.o
+*.md
+!README.md
+*.png
+*.txt
