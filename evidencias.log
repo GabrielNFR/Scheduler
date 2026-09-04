@@ -11,3 +11,59 @@ Script started on 2026-09-03 16:22:28-03:00 [TERM="xterm-256color" TTY="/dev/pts
 [?2004lexit
 
 Script done on 2026-09-03 17:21:17-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-04 15:32:00-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="161" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ date
+[?2004lFri Sep  4 15:32:07 -03 2026
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ pwd
+[?2004l/home/skickle/OS/Scheduler
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ whoami
+[?2004lskickle
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ make
+[?2004lmake: 'scheduler' is up to date.
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ exit[K[K[K[Kmake
+[?2004lmake: 'scheduler' is up to date.
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ makewhoami[3Ppwd[K[K[K[7mif (!interativo) printf("%s\n", linha);[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pif (!interativo) printf("%s\n", linha)[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7mmake clean[27mmake clean
+[?2004lrm -f scheduler
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ make
+[?2004lgcc -Wall -Wextra -o scheduler scheduler.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [7m./scheduler rate voo.txt[27m./scheduler rate voo.txt
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [7m./scheduler rate voo.txt; echo "exit=$?"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./scheduler rate voo.txt; echo "exit=$?"
+[?2004lexit=0
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [7m./scheduler edf voo.txt; echo "exit=$?"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./scheduler edf voo.txt; echo "exit=$?"
+[?2004lexit=0
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [7m./scheduler;                echo "exit=$?"   [27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./scheduler;                echo "exit=$?"   
+[?2004lUso: ./scheduler <modo> <arquivo.txt>
+exit=1
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [7m./scheduler x voo.txt;      echo "exit=$?"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./scheduler x voo.txt;      echo "exit=$?"
+[?2004lErro: modo não existente. Modos suportados: 'rate' e 'edf'
+exit=1
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [7m./scheduler rate inexist.txt; echo "exit=$?"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./scheduler rate inexist.txt; echo "exit=$?"
+[?2004lErro: nao foi possivel abrir 'inexist.txt'
+No such file or directory
+exit=1
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [7m./scheduler rate vazio.txt; echo "exit=$?"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./scheduler rate vazio.txt; echo "exit=$?"
+[?2004lErro: nao foi possivel abrir 'vazio.txt'
+No such file or directory
+exit=1
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [7mfor f in vazio.txt faltanScript started on 2026-09-04 17:31:10-03:00 [TERM="xterm-256color" TTY="/dev/pts/14" COLUMNS="161" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-04 17:31:11-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-04 17:31:23-03:00 [TERM="xterm-256color" TTY="/dev/pts/14" COLUMNS="161" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ exit./scheduler rate vazio.txt; echo "exit=$?
+[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> "
+[?2004lErro: arquivo vazio
+exit=1
+
+
+
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [7m./scheduler rate vazio.txt; echo "exit=$?"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./scheduler rate vazio.txt; echo "exit=$?"
+[?2004lErro: arquivo vazio
+exit=1
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-04 17:32:36-03:00 [COMMAND_EXIT_CODE="0"]
