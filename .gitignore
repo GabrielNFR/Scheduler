@@ -4,3 +4,4 @@ scheduler
 !README.md
 *.png
 *.txt
+*.out

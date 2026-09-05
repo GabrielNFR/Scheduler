@@ -67,3 +67,73 @@ exit=1
 [?2004lexit
 
 Script done on 2026-09-04 17:32:36-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-05 13:57:36-03:00 [TERM="xterm-256color" TTY="/dev/pts/14" COLUMNS="161" LINES="13"]
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ make
+[?2004lgcc -Wall -Wextra -o scheduler scheduler.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ ./scheduler rate voo.txt
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [7mdiff rate_gnfr.out esperado.txt && echo IGUAIS[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdiff rate_gnfr.out esperado.txt && echo IGUAIS
+[?2004l1a2
+> 
+19d19
+< 
+23d22
+< 
+26c25
+< [NAV] 0
+---
+> [NAV] 0
+\ No newline at end of file
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ make
+[?2004lgcc -Wall -Wextra -o scheduler scheduler.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ makediff rate_gnfr.out esperado.txt && echo IGUAIS[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[22P./scheduler rate voo.txt
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ ./scheduler rate voo.txtmake[Kdiff rate_gnfr.out esperado.txt && echo IGUAIS
+[?2004l1a2
+> 
+19,20d19
+< 
+< 
+24,25d22
+< 
+< 
+28c25
+< [NAV] 0
+---
+> [NAV] 0
+\ No newline at end of file
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ make
+[?2004lgcc -Wall -Wextra -o scheduler scheduler.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ makediff rate_gnfr.out esperado.txt && echo IGUAIS[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[22P./scheduler rate voo.txt
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ make
+[?2004lgcc -Wall -Wextra -o scheduler scheduler.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ make./scheduler rate voo.txt
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ ./scheduler rate voo.txtmake[K./scheduler rate voo.txtmake[Kdiff rate_gnfr.out esperado.txt && echo IGUAIS
+[?2004l27c27
+< [NAV] 0
+---
+> [NAV] 0
+\ No newline at end of file
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ [7mprintf '\n' >> esperado.txt[27mprintf '\n' >> esperado.txt
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ printf '\n' >> esperado.txtdiff rate_gnfr.out esperado.txt && echo IGUAIS
+[?2004lIGUAIS
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ make
+[?2004lgcc -Wall -Wextra -o scheduler scheduler.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ makediff rate_gnfr.out esperado.txt && echo IGUAIS
+[?2004lIGUAIS
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ ./scheduler raet[K[Kte voo.txt
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ ./scheduler rate voo.txtdiff rate_gnfr.out esperado.txt && echo IGUAIS
+[?2004lIGUAIS
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ make
+[?2004lgcc -Wall -Wextra -o scheduler scheduler.c
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ makediff rate_gnfr.out esperado.txt && echo IGUAIS[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[22P./scheduler rate voo.txt
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ ][Kdiff
+[?2004ldiff: missing operand after 'diff'
+diff: Try 'diff --help' for more information.
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ diff./scheduler rate voo.txtmake[Kdiff rate_gnfr.out esperado.txt && echo IGUAIS
+[?2004lIGUAIS
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ ./scheuler[K[K[Kdiff rate_gnfr.out esperado.txt && echo IGUAIS[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K./scheduler rate voo.txt[C[C[1P voo.txt[1P voo.txt[1P voo.txt[1P voo.txte voo.txtd voo.txtf voo.txt
+[?2004l[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ ./scheduler edf voo.txtdiff rate_gnfr.out esperado.txt && echo IGUAIS[1P[1P[1P[1P[1@e[1@d[1@f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@e[1@d[1@f
+[?2004lIGUAIS
+[?2004h]0;skickle@ROADLESS1: ~/OS/Scheduler[01;32mskickle@ROADLESS1[00m:[01;34m~/OS/Scheduler[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-05 14:51:30-03:00 [COMMAND_EXIT_CODE="0"]

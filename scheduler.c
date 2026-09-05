@@ -28,18 +28,24 @@ int main (int argc, char **argv) {
         return 1;
     }
  
-    simular(argv[1], t, n, tempo_total);
-
-
-
+    if (simular(argv[1], t, n, tempo_total) != 0) {
+        fclose(f);
+        return 1;
+    }
     fclose(f);
 
     return 0;
 }
 
-int validarArquivo(FILE *f, Task *t, int *n, int *tempo_total) {
+int validarArquivo(FILE *f, Task *t, int *n, int *tempo_total) {    
+    if (*n >= 1000) {
+        fprintf(stderr, "Erro: muitas tarefas (máx 1000)\n");
+        return 1;
+    }
+    
     char line[256];
     int linha = 1;
+
     while (fgets(line, sizeof(line), f) != NULL) {
         if (linha == 1) {
             int total;
@@ -81,22 +87,39 @@ int validarArquivo(FILE *f, Task *t, int *n, int *tempo_total) {
 int simular(char *modo, Task *t, int n, int total) {
     int is_rate = (strcmp(modo, "rate") == 0);
     int t_atual;
+    int rodando = -1;
+    int conta = 0;
+
+    char nome[50];
+    if (is_rate) {
+        strcpy(nome, "rate_gnfr.out");
+    } else {
+        strcpy(nome, "edf_gnfr.out");
+    }
+
+    FILE *f = fopen(nome, "w");
+    if (f == NULL) {
+        fprintf(stderr, "Erro: nao foi possivel abrir '%s'\n", nome);
+        perror("");
+        return 1;
+    }
+
+    fprintf(f, "EXECUTION BY %s\n\n", is_rate ? "RATE" : "EDF");
 
     for (t_atual = 0; t_atual < total; t_atual++) {
-        for (int i = 0; i < n; i++) {
-            if (t_atual % t[i].P == 0) {
-                t[i].ativa = 1;
-                t[i].restante = t[i].C;
-                t[i].deadline_abs = t_atual + t[i].D;
-            }
-        }
-    
-
         for (int i = 0; i < n; i++) {
             if (t[i].ativa && t_atual == t[i].deadline_abs && t[i].restante > 0) {
                 t[i].ativa = 0;
                 t[i].restante = 0;
                 t[i].perdidas++;
+            }
+        }
+        
+        for (int i = 0; i < n; i++) {
+            if (t_atual % t[i].P == 0) {
+                t[i].ativa = 1;
+                t[i].restante = t[i].C;
+                t[i].deadline_abs = t_atual + t[i].D;
             }
         }
 
@@ -122,13 +145,57 @@ int simular(char *modo, Task *t, int n, int total) {
                 t[melhor].completas++;
             }
         }
+
+        if (melhor != rodando) {
+            if (conta > 0) {
+                if (rodando == -1)
+                    fprintf(f, "idle for %d units\n", conta);
+                else if (t[rodando].ativa)
+                    fprintf(f, "[%s] for %d units - H\n", t[rodando].nome, conta);
+                else
+                    fprintf(f, "[%s] for %d units - L\n", t[rodando].nome, conta);
+            }
+            rodando = melhor;  
+            conta = 1;          
+        } else {
+            conta++;            
+        }
+
+        if (melhor != -1 && t[melhor].restante == 0) {
+            fprintf(f, "[%s] for %d units - F\n", t[melhor].nome, conta);
+            rodando = -1;
+            conta = 0;
+        }
+    }
+
+    if (conta > 0) {
+        if (rodando == -1)
+            fprintf(f, "idle for %d units\n", conta);
+        else if (t[rodando].restante == 0)
+            fprintf(f, "[%s] for %d units - F\n", t[rodando].nome, conta);   
+        else
+            fprintf(f, "[%s] for %d units - H\n", t[rodando].nome, conta);   
     }
 
     for (int i = 0; i < n; i++) {
         if (t[i].ativa && t[i].restante > 0) t[i].mortas++;
     }
 
+    fprintf(f, "\nLOST DEADLINES\n");
+    for (int i = 0; i < n; i++) {
+        fprintf(f, "[%s] %d\n", t[i].nome, t[i].perdidas);
+    }
+
+    fprintf(f, "\nCOMPLETE EXECUTION\n");
+    for (int i = 0; i < n; i++) {
+        fprintf(f, "[%s] %d\n", t[i].nome, t[i].completas);
+    }
+
+    fprintf(f, "\nKILLED\n");
+    for (int i = 0; i < n; i++) {
+        fprintf(f, "[%s] %d\n", t[i].nome, t[i].mortas);
+    }
+
+    fclose(f);
     return 0;
 }
-
-
