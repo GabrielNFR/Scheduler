@@ -1,3 +1,4 @@
+#include <math.h>
 #include <string.h>
 #include "scheduler.h"
 
@@ -194,6 +195,13 @@ int simular(char *modo, Task *t, int n, int total) {
     for (int i = 0; i < n; i++) {
         fprintf(f, "[%s] %d\n", t[i].nome, t[i].mortas);
     }
+
+    double utilizacao = 0.0;
+    for (int i = 0; i < n; i++) {
+        utilizacao += (double) t[i].C / t[i].P;
+    }
+    double bound = (n > 0) ? n * (pow(2.0, 1.0 / n) - 1.0) : 0.0;
+    fprintf(f, "\nSCHEDULABILITY UTILIZATION %.3f RM BOUND %.3f\n", utilizacao, bound);
 
     fclose(f);
     return 0;
