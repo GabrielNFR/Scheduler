@@ -38,11 +38,6 @@ int main (int argc, char **argv) {
 }
 
 int validarArquivo(FILE *f, Task *t, int *n, int *tempo_total) {    
-    if (*n >= 1000) {
-        fprintf(stderr, "Erro: muitas tarefas (máx 1000)\n");
-        return 1;
-    }
-    
     char line[256];
     int linha = 1;
 
@@ -66,6 +61,10 @@ int validarArquivo(FILE *f, Task *t, int *n, int *tempo_total) {
 
             if (campos != 4 || P <= 0 || D <= 0 || C <= 0 || C > D || D > P) {
                 fprintf(stderr, "Erro: linha %d inválida\n", linha);
+                return 1;
+            }
+            if (*n >= 1000) {
+                fprintf(stderr, "Erro: muitas tarefas (máx 1000)\n");
                 return 1;
             }
             strcpy(t[*n].nome, nome);
